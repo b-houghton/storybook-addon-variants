@@ -34,6 +34,7 @@
     "prebuild": "yarn clean",
     "build": "concurrently \"yarn buildBabel\"",
     "build:watch": "concurrently \"yarn buildBabel:esm -- --watch\" \"yarn buildTsc -- --watch\"",
+    "prepare": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "start": "concurrently \"yarn build:watch\" \"yarn storybook -- --no-manager-cache --quiet\"",
